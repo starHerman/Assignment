@@ -1,0 +1,38 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+
+}
+
+body{
+    border:2px solid red;
+}
+.parent{
+    border:20px solid black;
+    display:flex;
+    height: 100vh;
+    margin:25vh;
+    flex-flow: row wrap;
+    align-items: baseline;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: row; */
+
+     align-content: flex-start;
+
+
+
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+
+
+}
+.parent div{
+    background-color: blue;
+    
+    width:100px;
+    height: 100px;
+    margin: auto;
+}
