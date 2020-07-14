@@ -1,0 +1,17 @@
+1. What is non-breaking in &nbsp;   
+    A non-breaking space is space that will not break into a new line.
+
+2. What is encoding.
+    encoding is character sets. To display a html page correctly, the browser must know 
+    what encoding to use.
+
+3. .txt , .doc, .html  
+    They are different file types. 
+    txt: text only without graphics
+    doc: text with graphics
+    html: HyperText Markup Language. It defines the structure and layout of a web document.
+4. id Vs name
+    They seem to serve the same purpose of providing an identifier.
+    We use name attribute for the form controls（such as the <input>),for example you can have several ratio buttons
+    with different id attribute but the same name.
+    we use id to address the particular html element with CSS ,Javascript.
