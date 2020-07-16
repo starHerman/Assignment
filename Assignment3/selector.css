@@ -1,0 +1,28 @@
+div p{
+    color: blue;
+}
+
+p.p1{
+    color:orange;
+}
+
+div>p{
+    color:orangered;
+}
+
+div+p{
+    color:green;
+}
+a:hover{
+    color:green;
+}
+
+/* p:nth-of-type(2){
+    background: yellow;
+} */
+p:nth-child(odd){
+    background: yellow;
+}
+p:nth-child(even){
+    background: lightblue;
+}
