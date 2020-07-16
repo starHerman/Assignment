@@ -26,3 +26,7 @@ p:nth-child(odd){
 p:nth-child(even){
     background: lightblue;
 }
+
+div~p{
+    color:purple;
+}
