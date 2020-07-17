@@ -10,13 +10,14 @@ rem is only relative to the html(root) font-size.
 
 #id      Select all elements with centain id
 
-div ~ p  Selects every p element that are preceded by a div element
+div ~ p  Selects every p element that are preceded by a div element(multiple)
+div + p  Select p that is immediate after the div element(only one)
 
 div p    Select all p elements inside a div element
 
 div > p  Select all p where the parent is a div element
 
-div + p  Select p that is immediate after the div element
+
 
 [target]  Select all element with certain target
 
