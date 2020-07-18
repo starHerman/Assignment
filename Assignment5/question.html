@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var personnel = [
+
+                {
+
+                    id: 5,
+
+                    name: "Luke Skywalker",
+
+                    pilotingScore: 98,
+
+                    shootingScore: 56,
+
+                    isForceUser: true,
+
+                },
+
+                {
+
+                    id: 82,
+
+                    name: "Sabine Wren",
+
+                    pilotingScore: 73,
+
+                    shootingScore: 99,
+
+                    isForceUser: false,
+
+                },
+
+                {
+
+                    id: 22,
+
+                    name: "Zeb Orellios",
+
+                    pilotingScore: 20,
+
+                    shootingScore: 59,
+
+                    isForceUser: false,
+
+                },
+
+                {
+
+                    id: 15,
+
+                    name: "Ezra Bridger",
+
+                    pilotingScore: 43,
+
+                    shootingScore: 67,
+
+                    isForceUser: true,
+
+                },
+
+                {
+
+                    id: 11,
+
+                    name: "Caleb Dume",
+
+                    pilotingScore: 71,
+
+                    shootingScore: 85,
+
+                    isForceUser: true,
+
+                },
+
+            ];
+            // Our objective: get the total score of force users only
+            var total=0;
+            var forceUsers=personnel.filter((p)=>{
+                return p.isForceUser==true;
+            })
+            total=forceUsers.reduce((acc,forceUser)=>{
+               return  acc+forceUser.pilotingScore+forceUser.shootingScore;
+            },0)
+            console.log("The total score of force users only is ",total)
+            //         (map, reduce, filter)
+
+
+            //     3. display all employee names from the json data  
+            var emplyeeName=personnel.map(p=>{
+                return p.name
+            })
+            console.log("All employee names from the json data is ",emplyeeName)
+
+
+
+            //for in: loop through the properties of the object
+            //for of: loop through the values of a iterable object  like array
+                function myFunction() {
+                    var person = { fname: "John", lname: "Doe", age: 25 };
+                    var b=[1,2,34,5]
+                    var text = "";
+                    var x;
+                    for (x in person) {
+                        console.log(x)
+                    }
+                    for(let x in b){
+                        console.log(b[x])
+                    }
+                }
+            myFunction();
+    </script>
+</body>
+</html>

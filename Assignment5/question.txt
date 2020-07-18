@@ -1,0 +1,7 @@
+rest spread  ...
+
+for in and for of
+
+forEach and map
+
+reduce
