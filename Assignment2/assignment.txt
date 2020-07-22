@@ -1,0 +1,34 @@
+Assignments:
+1. em Vs rem
+em is relative to the font-size of its direct or nearest parent, 
+rem is only relative to the html(root) font-size.
+ 
+
+2. css selectors:
+
+.class   Select all elements with certain classname
+
+#id      Select all elements with centain id
+
+div ~ p  Selects every p element that are preceded by a div element(multiple)
+div + p  Select p that is immediate after the div element(only one)
+
+div p    Select all p elements inside a div element
+
+div > p  Select all p where the parent is a div element
+
+
+
+[target]  Select all element with certain target
+
+p:first-child Select p that is the first child of its parent
+
+p::first-letter Select the first letter of every p element
+
+p::first-line   Select the first line of every p element
+ 
+p::first-of-type  Select p that is the first p of its parent
+  
+input:read-only    Select input with readonly attribute specified
+
+input:required      Select input with required attribute specified
