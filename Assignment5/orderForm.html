@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.js"></script>
+    <script src="orderForm.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="app" ng-controller="emp">
+    <div class="main">
+        <div class="head">
+            <h2>Services</h2>
+        </div>
+        <div class="child" ng-repeat="emp in emps" ng-click="select(emp)" ng-class="{true:'active',false:'inactive'}[emp.selected]">
+            <div class="left">{{emp.name}}</div>
+            <div class="right">{{emp.val|currency}}</div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="left">Total:</div>
+            <div class="right">{{total|currency}}</div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

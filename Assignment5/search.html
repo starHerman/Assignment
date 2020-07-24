@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.js"></script>
+    <script src="search.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+        }
+        th{
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+}
+    </style>
+</head>
+<body ng-app='app' ng-controller='search'>
+    Search:<input ng-model="query"><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emp in emps | filter:query">
+                <td>{{emp.title}}</td>
+                <td>{{emp.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

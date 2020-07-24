@@ -1,0 +1,38 @@
+.main{
+    margin-left: 25vw;
+    width: 500px;
+    height: 500px;
+    border: 1px solid orangered;
+    background-color: lightblue;
+}
+.head{
+    text-align: center;
+    color:white;
+}
+.active{
+    background-color: green;
+}
+.inactive{
+    background-color: orangered;
+}
+.child{
+    margin: 20px;
+    border: 1px solid black;
+    height: 40px;
+}
+.left{
+    margin:0;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+.bottom{
+    margin: 20px;
+}
+.right{
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 20px; 
+}
