@@ -1,0 +1,20 @@
+Negative Matcher.
+    Any matcher can be evaluate to a Negative assertion by adding a not before calling the matcher
+toBeDefined, toBeUndefined
+    toBeDefined is used to check whether any varibale in the code is predefined or not
+    toBeUndefined is used to check whether any varibale in the code is undefined or not
+toBeNull
+    used to check null values
+toContain
+    toContain(value) is used to check whether the varibale contains the value or not
+toBeNaN
+    used to check Nan values
+toThrow, toThrowError
+    toThrow is used to check whether a function throws something
+    toThrowError is used to check whether a function throws an error
+toMatch
+    toMatch(Reg) is used to check whether the varibale match the Reg expression
+Match anything
+    anything is used to check whether a varibale is not null or undefined
+
+ 
