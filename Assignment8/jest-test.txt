@@ -1,0 +1,76 @@
+
+//delete
+describe("TodoController.deleteTodoById", ()=>{
+    it("should have a deleteTodoById function", ()=>{
+        expect(typeof TodoController.deleteTodoById).toBe("function")
+    });
+    it("should call  TodoModel.deleteTodoById  with route parameters", async ()=>{
+
+        req.params.todoId = "5f2443a23303881c580d10a2"
+        await TodoController.deleteTodoById(req, res, next);
+        expect(TodoModel.deleteById).toBeCalledWith("5f2443a23303881c580d10a2");
+    });
+    it("should return json body and response code 200", async ()=>{
+        TodoModel.deleteById.mockReturnValue(newTodo);
+        await TodoController.deleteTodoById(req, res, next);
+
+        expect(res.statusCode).toBe(200);
+        expect(res._getJSONData()).toStrictEqual(newTodo);
+        expect(res._isEndCalled()).toBeTruthy();
+    });
+
+    it("should handle errors", async()=>{
+        const errorMessage = {message: "Error deleting todoModel"};
+        const rejectedPromise = Promise.reject(errorMessage);
+
+        TodoModel.deleteById.mockReturnValue(rejectedPromise);
+        await TodoController.deleteTodoById(req, res, next)
+
+        expect(next).toHaveBeenCalledWith(errorMessage);
+    });
+    it("should return 404 when item doesnt exist", async ()=>{
+        TodoModel.deleteById.mockReturnValue(null);
+        await TodoController.deleteTodoById(req, res, next);
+        expect(res.statusCode).toBe(404);
+        expect(res._isEndCalled()).toBeTruthy();
+        
+    })
+
+})
+
+
+
+describe("TodoController.updateTodo", ()=>{
+
+    beforeEach(()=>{
+        req.body = newTodo;
+    })
+    it("should have a updateTodo function", ()=> {
+        expect(typeof TodoController.updateTodo).toBe("function");
+    });
+    it("should call TodoModel.update", () => {
+        TodoController.updateTodo(req, res, next);
+        expect(TodoModel.update).toBeCalledWith(newTodo);
+    });
+    it("should return 201 response code", async ()=> {
+        await TodoController.updateTodo(req, res, next);
+        expect(res.statusCode).toBe(201);
+        expect(res._isEndCalled()).toBeTruthy();
+    });
+    it("should return json body in response", async ()=>{
+        TodoModel.update.mockReturnValue(newTodo);
+        await TodoController.updateTodo(req, res, next);
+
+        //node mocks
+        expect(res._getJSONData()).toStrictEqual(newTodo);
+    });
+    it("should handle errors", async ()=>{
+        const errorMessage = {message: "Done property missing"};
+        const rejectedPromise = Promise.reject(errorMessage);
+
+        TodoModel.update.mockReturnValue(rejectedPromise);
+        await TodoController.updateTodo(req, res, next);
+
+        expect(next).toBeCalledWith(errorMessage);
+    })
+});
