@@ -1,0 +1,59 @@
+1.Get only one of the children props
+use the this.props.children[index] to get the index item
+
+import React, { Component } from 'react'
+ class Regular extends Component {
+    render() {
+         
+        return (
+            <div> 
+                Regular Component 
+                {this.props.children[0]}
+            </div>
+        )
+    }
+}
+
+export default Regular
+
+
+2. Get the value from Input box an option and display it in an alert box
+
+import React, { Component } from 'react'
+
+ class From extends Component {
+     constructor(props) {
+         super(props)
+     
+         this.state = {
+              inputValue:""
+         }
+         this.handleInputChange=this.handleInputChange.bind(this);
+     }
+     
+    render() {
+        return (
+          <div>
+            <form>
+              <label>username</label>
+              <input type="text" onChange={this.handleInputChange}value={this.inputValue}/>
+              <select>
+                <option value="react">React</option>
+                <option value="angular">Angular</option>
+                <option value="vue">Vue</option>
+              </select>
+              <button type="submit">submit</button>
+            </form>
+          </div>
+        );
+    }
+    handleInputChange(e){
+        let value = e.target.value;
+        this.setState({
+            inputValue:value
+        })
+        alert(value)
+    }
+}
+
+export default From
