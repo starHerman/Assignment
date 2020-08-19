@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .section1{
+            height:60px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='section1' id="section1">
+        <img src="music.png" alt="" style="height: 60px; float: left;" >
+        <input id="colorS1" type="color" style="float:right;display: block; margin: 16px 0;" onchange="colorChange1()">
+        <h1 style="line-height: 60px; margin:0; text-align: center;">Awesome Online videos</h1>
+        
+    </div>
+    <div class='section2' id='section2'style="text-align: center;">
+        <input id="colorS2" type="color" style="float:right;display: block; margin: 16px 0;" onchange="colorChange2()">
+        <video width="320px" height="240px" id="myVideo" >
+            <source src="movie.mp4">
+        </video>
+        <div>
+            <button onclick="play()">Play</button>
+            <button onclick="pause()">Pause</button>
+        </div>
+
+    </div>
+    <script>
+        var video=document.getElementById('myVideo')
+        function play(){
+            video.play()
+        }
+        function pause(){
+            video.pause()
+        }
+        function colorChange1() {
+                var color = document.getElementById('colorS1').value
+                document.getElementById('section1').style.background = color
+            }
+        function colorChange2(){
+            var color=document.getElementById('colorS2').value
+            document.getElementById('section2').style.background=color
+        }
+    </script>
+    
+</body>
+</html>

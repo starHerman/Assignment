@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agricultural Statistics</title>
+</head>
+
+<body style="margin:0; padding: 0;">
+    <h1> Agricultural Statistical Department of GOI</h1>
+    <p>the line chart of the yield of Bajra from 2001 to 2007.</p>
+   
+    <canvas id="myCanvas" width="500" height="400" style="border:1px solid #d3d3d3;">
+       </canvas>
+
+    <script>
+        var canvas=document.getElementById('myCanvas')
+        var ctx=canvas.getContext('2d')
+        //y axis
+        ctx.strokeText("500",0,40);
+        ctx.strokeText("450", 0, 80);
+        ctx.strokeText("400", 0, 120);
+        ctx.strokeText("350", 0, 160);
+        ctx.strokeText("300", 0, 200);
+        ctx.strokeText("250", 0, 240);
+        ctx.strokeText("200", 0, 280);
+        ctx.strokeText("150", 0,320);
+        //x axis
+        ctx.strokeText("2001",20,340)
+        ctx.strokeText("2002", 80, 340)
+        ctx.strokeText("2003", 140, 340)
+        ctx.strokeText("2004", 200, 340)
+        ctx.strokeText("2005", 260, 340)
+        ctx.strokeText("2006", 320, 340)
+        ctx.strokeText("2007", 380, 340)
+
+        //draw axis
+        ctx.moveTo(20,20)
+        ctx.lineTo(20,320)
+        ctx.lineTo(400,320)
+        ctx.stroke()
+
+        //
+        ctx.strokeText("281",20,200)
+        ctx.moveTo(20,205)
+        ctx.strokeText("277", 80, 205)
+        ctx.lineTo(80,210)
+        ctx.strokeText("275", 140, 208)
+        ctx.lineTo(140,213)
+        ctx.strokeText("457", 200, 75)
+        ctx.lineTo(200,75)
+        ctx.strokeText("200", 260, 270)
+        ctx.lineTo(260,270)
+        ctx.strokeText("280", 320, 202 )
+        ctx.lineTo(320,199)
+        ctx.strokeText("150", 360, 320)
+        ctx.lineTo(380,320)
+
+
+
+        ctx.stroke()
+
+        
+    </script>
+</body>
+
+</html>

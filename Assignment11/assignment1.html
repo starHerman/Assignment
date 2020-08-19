@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            border:0
+        }
+        .header{
+            border:1px solid black;
+
+            overflow: hidden;
+        }
+        img{
+            display: block;
+            float: left;
+            height: 58px;
+            padding:1px 0;
+        }
+        .intro{
+            height: 58px;
+            margin:1px auto;
+            text-align: center;
+            line-height: 50px;
+            
+        }
+        .name{
+            float:right;
+            height: 58px;
+            text-align: center;
+            line-height: 58px;
+            padding-right: 10px;
+        }
+        .content{
+            margin-top:30px;
+            
+        }
+        .form-item{
+            margin:10px auto;
+            text-align: center;
+        }
+        label{
+            display: inline-block;
+            width: 100px;
+            padding:0 5px;
+        }
+        input{
+            
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png"/>
+        <div class="name">Xena Events</div>
+        <h2 class="intro">conducting a hot balloon riding event from Feb 28th 2017 onwards for 5 days</h2>
+    </div>
+    <div class="content">
+        <form onsubmit="submitForm()" >
+            <div class="form-item" >
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div class="form-item">
+                <label for="age">Age:</label>
+                <input type="number" placeholder="Age" id="age">
+            </div>
+            <div class="form-item">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Email" id="email">
+            </div>
+            <div class="form-item">
+                <label for="city">Age:</label>
+                <select name="city" id="city" style="width: 149px; padding:2px; ">
+                    <option value="Rajkot">Rajkot</option>
+                    <option value="Vizag">Vizag</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Submit">
+
+            </div>
+            
+        </form>
+    </div>
+    
+    <script>
+        function submitForm(){
+            var name=document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var email = document.getElementById('email').value;
+            var city=document.getElementById('city').value
+             if (!name.match(/^[A-Za-z]+$/)) {
+                alert("Name can be alphabet only");
+            }
+            if (Number(age) < 18) {
+                alert("Age should be equal or greater than 18");
+            }
+            if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("Invalid Email");
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
