@@ -1,0 +1,34 @@
+
+What does describe do in Jasmine
+    In Jasmine, describe function is for grouping related specs. The string parameter is for naming the collection of specs, and will be concatenated with specs to make a spec’s full name. This helps in finding specs in a large suite.
+What does SpyOn  do.
+    Jasmine provides the spyOn() function for such purposes. spyOn() takes two parameters: the first parameter is the name of the object and the second parameter is the name of the method to be spied upon. It replaces the spied method with a stub, and does not actually execute the real method.
+Code Coverage
+    test coverage is a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs
+What e2e in angular
+	End to end testing (E2E) or also known as integration testing is a great way to make sure at a high-level overview that our applications function correctly. Commonly we use E2E tests to help ensure our components are working correctly together to create an entirely functioning feature cohesively. E2E tests are not Unit tests. Unit tests should test a small isolated piece of code while the E2E test is a high-level test of a feature or several interactions.
+What are the differences between Angular 2/4/6/8 versions.
+    Angular 2:
+    •	Component-based instead of Controller  
+    •	Support for Mobile/Low-end devices
+    Angular 4:
+    •	Animation features are separated from @angular/core to @angular/animation
+    •	Else block in *ngIf introduced:
+    •	Lot of performance improvement is made to reduce size of AOT compiler generated code
+    Angular 6:
+    •	Remove support for <template> tag and “<ng-template>” should be used.
+    •	Registering provider: To register new service/provider, we import Service into module and then inject in provider array. 
+    •	It uses angular.json instead of .angular-cli.json
+    •  	Support for multiple projects: Now in angular.json we can add multiple projects
+    Angular 8:
+    •	Added a Navigation Type Available during Navigation in the Router
+    •	Added pathParamsOrQueryParamsChange mode for runGuardsAndResolvers in the Router
+    •	Allow passing state to routerLink Directives in the Router
+    •	Allow passing state to NavigationExtras in the Router
+    •	Restore the whole object when navigating back to a page managed by Angular Router
+    •	Added support for SASS
+    •	Added functionality to mark a control and its descendant controls as touched: — add markAllAsTouched () to AbstractControl
+    •	Added an ng-new command that builds the project with Bazel
+    •	Export NumberValueAccessor & RangeValueAccessor directives
+
+
