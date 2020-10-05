@@ -1,0 +1,19 @@
+
+Body-parser
+bodyParser can parse the incoming request bodies in a middleware before your hanlders, avalible undder the request.body.
+Usually we use bodyParser to read the http post data.
+
+app.use(bodyParser.urlencoded({extended: false}));
+bodyParser middleware only parse the urlencoded data withe the querystring library
+
+ejs , pug
+ejs:It is a simple templating language that lets you generate HTML markup with plain JavaScript. 
+No religiousness about how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript.
+
+pug:Pug is a high performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers.
+
+Serving static data(express.static)
+To serve static files such as images, CSS files and JavaScript files
+
+Serve dynamic data
+(express.Router)we have separate files to access different data and route it to where it need to be 
